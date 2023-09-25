@@ -1,5 +1,5 @@
 variable_shared_by_all: I am shared by everyone
 central_variable_to_override: central
 
-# defined here as general pattern is used
+# defined at top level with stage and platform defined in platform specific folders
 platform_kv: as-{{ stage }}-{{ platform }}-kv
