@@ -30,4 +30,4 @@
 
           Region variables
           ----------------------------------------------------------------------------------------------------
-          region_is_euw: {{ region_is_euw }}
+          region: {{ region | default('not_set') }}
