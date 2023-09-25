@@ -1,2 +1,4 @@
 stage: pd
+
+# Set in group_vars/all
 # platform_kv: as-{{ stage }}-{{ platform }}-kv
