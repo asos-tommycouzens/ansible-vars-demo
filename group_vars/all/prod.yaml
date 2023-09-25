@@ -1,0 +1,2 @@
+stage: pd
+shared_kv: as-{{ stage }}-core-kv

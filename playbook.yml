@@ -1,0 +1,33 @@
+---
+# file: playbook.yml
+
+- hosts: "all"
+  serial: 1
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: Include stage-specific variables
+      include_vars: "group_vars/{{ group_names[0] }}/{{ stage }}.yaml"
+
+    - name: Show facts
+      debug:
+        msg: |
+          Central variables
+          ----------------------------------------------------------------------------------------------------
+          variable_shared_by_all            : {{ variable_shared_by_all }}
+          central_variable_to_override      : {{ central_variable_to_override }}
+
+          Platform variables
+          ----------------------------------------------------------------------------------------------------
+          platform            : {{ platform }}
+
+          Stage variables (non-prod vs prod)
+          ----------------------------------------------------------------------------------------------------
+          shared_kv            : {{ shared_kv }}
+          platform_kv          : {{ platform_kv }}
+
+          Region variables
+          ----------------------------------------------------------------------------------------------------
+          region_is_euw: {{ region_is_euw }}

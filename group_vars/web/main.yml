@@ -1,0 +1,3 @@
+platform: web
+central_variable_to_override: overridden by web
+
