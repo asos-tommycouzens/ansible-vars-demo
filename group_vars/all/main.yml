@@ -2,4 +2,5 @@ variable_shared_by_all: I am shared by everyone
 central_variable_to_override: central
 
 # defined at top level with stage and platform defined in platform specific folders
+cluster_name: as-{{ stage }}-{{ region }}-{{ platform }}-{{ cluster_id }}-aks
 platform_kv: as-{{ stage }}-{{ platform }}-kv

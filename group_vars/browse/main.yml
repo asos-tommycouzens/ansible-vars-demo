@@ -1,2 +1,5 @@
 platform: browse
 central_variable_to_override: overridden by browse
+
+# overriding from main as different format is used with cluster_id at front
+cluster_name: as-{{ cluster_id }}-{{ stage }}-{{ region }}-{{ platform }}-aks
